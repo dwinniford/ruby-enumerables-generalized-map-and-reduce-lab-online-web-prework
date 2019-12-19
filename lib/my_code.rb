@@ -24,6 +24,7 @@ def reduce_true_false(array, memo = 0)
   i = 0 
   while i < array.length do 
     if yield(memo, array[i])
+      i 
       yield
     end 
   end 
