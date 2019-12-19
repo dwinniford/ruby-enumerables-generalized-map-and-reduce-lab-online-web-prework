@@ -8,9 +8,13 @@ def map(array)
   new_array
 end 
 
-def reduce(array, memo = 0 )
+def reduce(array, sv = nil )
+  if sv 
+    total = sv 
+  else 
+    total = 0 
+  end 
   i = 0 
-  total = memo
   while i < array.length do 
     
     total = yield(total, array[i])
