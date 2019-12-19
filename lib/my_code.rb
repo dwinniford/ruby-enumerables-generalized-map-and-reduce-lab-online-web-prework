@@ -22,9 +22,11 @@ end
 
 def reduce_true_false(array, memo = 0)
   i = 0 
+  result = memo
   while i < array.length do 
     if yield(memo, array[i])
-      i 
+      result = return  
+    else result = false 
       yield
     end 
   end 
